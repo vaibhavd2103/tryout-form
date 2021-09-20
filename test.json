@@ -1,0 +1,17 @@
+{
+  "$schema": "./schema.json",
+  "about": "Bro i am rohit i code and have depression, i have heat, take me in plz",
+  "name": "Rohit Patil",
+  "projects": [
+    {
+      "projectName": "me",
+      "projectDescription": "self develeopment is a big project",
+      "projectUrl": "pune aane do fhir deta hu URL"
+    }
+  ],
+  "socials": {
+    "email": "rahulhimesh09@gmail.com",
+    "linkedin": "bruh no",
+    "mobile": "+919503442316"
+  }
+}

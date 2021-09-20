@@ -1,0 +1,62 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "type": "object",
+  "title": "Applicant",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Name of the applicant"
+    },
+    "about": {
+      "type": "string",
+      "description": "Bio of the applicant"
+    },
+    "projects": {
+      "type": "array",
+      "description": "Projects done by the candidate",
+      "items": {
+        "$ref": "#/$defs/project"
+      },
+      "minItems": 0
+    },
+    "socials": {
+      "type": "object",
+      "properties": {
+        "mobile": {
+          "type": "string",
+          "description": "Phone Number"
+        },
+        "linkedin": {
+          "type": "string",
+          "description": "Linkedin Profile URL"
+        },
+        "email": {
+          "type": "string",
+          "description": "email"
+        }
+      },
+      "required": ["mobile", "email"]
+    }
+  },
+  "required": ["name", "about"],
+  "$defs": {
+    "project": {
+      "type": "object",
+      "required": ["projectName", "projectUrl"],
+      "properties": {
+        "projectName": {
+          "type": "string",
+          "description": "project name"
+        },
+        "projectDescription": {
+          "type": "string",
+          "description": "Description of the project"
+        },
+        "projectUrl": {
+          "type": "string",
+          "description": "URL of the Project repository where the source code is hosted"
+        }
+      }
+    }
+  }
+}
